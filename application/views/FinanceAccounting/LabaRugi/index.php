@@ -11,6 +11,41 @@
 					</div>
 				</div>
 				<div class="card-body">
+					<form action="" method="get">
+						<div class="row">
+							<div class="col-lg-4 col-sm-12 form-group">
+								<label style="font-weight: 500;">Dari Tanggal</label>
+								<div class="input-group input-group-sm">
+									<input type="text" class="form-control text-center flatpickr-input readonly" name="dari_tanggal" id="dari_tanggal" value="<?= !isset($_GET['dari_tanggal']) ? date('Y-m-d') : $_GET['dari_tanggal'] ?>">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="fa fa-calendar"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-sm-12 form-group">
+								<label style="font-weight: 500;">Sampai Tanggal</label>
+								<div class="input-group input-group-sm">
+									<input type="text" class="form-control text-center flatpickr-input readonly" name="sampai_tanggal" id="sampai_tanggal" value="<?= !isset($_GET['sampai_tanggal']) ? date('Y-m-d') : $_GET['sampai_tanggal'] ?>">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="fa fa-calendar"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-sm-12 form-group">
+								<label style="font-weight: 500;">&nbsp;</label>
+								<div class="input-group input-group-sm">
+									<input type="submit" name="submit" class="btn btn-success" value="Filter">
+								</div>
+							</div>
+						</div>
+
+						<br><br>
+					</form>
+
 					<div class="row">
 						<div class="col-lg-6 col-sm-6">
 							<div class="table-responsive">
@@ -18,7 +53,7 @@
 									<thead style="background-color: #3B6D8C;">
 										<tr class="text-white">
 											<th colspan="3">Akun</th>
-											<th class="text-right">Jumlah</th>							
+											<th class="text-right">Jumlah</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -33,7 +68,7 @@
 									<thead style="background-color: #3B6D8C;">
 										<tr class="text-white">
 											<th colspan="3">Akun</th>
-											<th class="text-right">Jumlah</th>							
+											<th class="text-right">Jumlah</th>
 										</tr>
 									</thead>
 									<tbody>

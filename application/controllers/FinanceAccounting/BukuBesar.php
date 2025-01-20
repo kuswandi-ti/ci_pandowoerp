@@ -102,8 +102,8 @@ class BukuBesar extends CI_Controller
 
 		// Saldo Akhir
 		$hasil .= "<tr style='border-bottom: 1px solid black;'>";
-			$hasil .= "<td colspan='7'><b>Saldo Akhir</b></td>";
-			$hasil .= "<td align ='right'><b>" . format_currency($saldo_akhir) . "</b></td>";
+			$hasil .= "<td colspan='7' class='text-danger'><b>Saldo Akhir</b></td>";
+			$hasil .= "<td align ='right' class='text-danger'><b>" . format_currency($saldo_akhir) . "</b></td>";
 		$hasil .= "</tr>";
 
 		return $hasil;

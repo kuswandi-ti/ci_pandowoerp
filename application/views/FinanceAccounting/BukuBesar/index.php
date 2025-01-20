@@ -13,20 +13,20 @@
 				<div class="card-body">
 					<form action="" method="get">
 						<div class="row">
-							<div class="col-lg-12 col-sm-12 pb-4">						
+							<div class="col-lg-12 col-sm-12 pb-4">
 								<select class="form-control form-control-lg select2 px-4" name="coa" id="coa">
 									<option value="">Pilih Akun</option>
 									<?php foreach ($coa->result() as $row) : ?>
 										<option <?= ($row->SysId == (!isset($_GET['coa']) ? "" : $_GET['coa']) ? 'selected' : null) ?> value="<?= $row->SysId ?>"><?= $row->kode_akun ?> - <?= $row->nama_akun ?></option>
 									<?php endforeach; ?>
-								</select>						
+								</select>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-lg-6 col-sm-12 form-group">
 								<label style="font-weight: 500;">Dari Tanggal</label>
 								<div class="input-group input-group-sm">
-									<input type="text" class="form-control text-center flatpickr-input readonly" name="dari_tanggal" id="dari_tanggal" value="<?= date('Y-m-d') ?>">
+									<input type="text" class="form-control text-center flatpickr-input readonly" name="dari_tanggal" id="dari_tanggal" value="<?= !isset($_GET['dari_tanggal']) ? date('Y-m-d') : $_GET['dari_tanggal'] ?>">
 									<div class="input-group-prepend">
 										<div class="input-group-text">
 											<i class="fa fa-calendar"></i>
@@ -37,7 +37,7 @@
 							<div class="col-lg-6 col-sm-12 form-group">
 								<label style="font-weight: 500;">Sampai Tanggal</label>
 								<div class="input-group input-group-sm">
-									<input type="text" class="form-control text-center flatpickr-input readonly" name="sampai_tanggal" id="sampai_tanggal" value="<?= date('Y-m-d') ?>">
+									<input type="text" class="form-control text-center flatpickr-input readonly" name="sampai_tanggal" id="sampai_tanggal" value="<?= !isset($_GET['sampai_tanggal']) ? date('Y-m-d') : $_GET['sampai_tanggal'] ?>">
 									<div class="input-group-prepend">
 										<div class="input-group-text">
 											<i class="fa fa-calendar"></i>
@@ -46,7 +46,7 @@
 								</div>
 							</div>
 						</div>
-							
+
 						<br>
 
 						<div class="btn-group">
@@ -55,7 +55,7 @@
 
 						<br><br>
 					</form>
-					
+
 					<div class="row">
 						<div class="col-lg-12 col-sm-12">
 							<div class="table-responsive">
@@ -69,7 +69,7 @@
 											<th class="text-center">Tipe</th>
 											<th class="text-right">Debet</th>
 											<th class="text-right">Kredit</th>
-											<th class="text-right">Saldo</th>								
+											<th class="text-right">Saldo</th>
 										</tr>
 									</thead>
 									<tbody>
