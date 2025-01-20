@@ -1,0 +1,108 @@
+.tbl-xs {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tbl-xs td,
+.tbl-xs th {
+  border: 0.5px solid #ddd;
+  padding: 2px;
+  text-align: center;
+  font-size: 9pt;
+}
+
+.tbl-xs tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tbl-xs tr:hover {
+  background-color: #ddd;
+}
+
+.tbl-xs th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #3B6D8C;
+  color: white;
+}
+
+#DataTable_filter {
+  float: left;
+}
+
+#DataTable_filter label input {
+  width: 50vh;
+}
+
+.dt-buttons.btn-group.flex-wrap {
+  float: right;
+}
+
+/* .card-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+
+div.table-mini-container {
+  overflow: auto;
+  min-width: 100px;
+}
+
+table.table-mini {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: verdana;
+  font-size: 8pt;
+}
+
+
+table.table-mini td {
+  border: 1px solid #ddd;
+  padding: 0.1rem;
+}
+
+table.table-mini th {
+  border: 1px solid #ddd;
+  padding: 0.4rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+table.table-mini thead,
+table.table-mini tfoot {
+  background-color: #f5f5f5;
+}
+
+/* table.table-mini>tbody>tr>td:first-child,
+table.table-mini>tbody>tr>th:first-child,
+table.table-mini>thead>tr>th:first-child,
+table.table-mini>thead>tr>td:first-child,
+table.table-mini>tfoot>tr>td:first-child,
+table.table-mini>tfoot>tr>th:first-child {
+  text-align: center;
+  background-color: #f5f5f5;
+} */
+
+table.table-mini>tbody>tr>td:not(:first-child) {
+  min-width: 15px;
+}
+
+.input-xs {
+  height: 22px !important;
+  padding: 2px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.input-group-xs>.form-control,
+.input-group-xs>.input-group-addon,
+.input-group-xs>.input-group-btn>.btn {
+  height: 22px;
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+}
